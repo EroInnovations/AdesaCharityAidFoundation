@@ -2,84 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adesa Charity Aid Foundation</title>
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ✅ Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<style>
-html,body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-}
-
-.loading-container {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 6px solid #333333;
-  border-top: 6px solid #00bfff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 20px auto;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loading-text {
-  font-size: 1.2rem;
-  color: #000000;
-}
-</style>
 <body>
-  <div class="loading-container">
-    <div>
-      <div class="spinner"></div>
-      <p class="loading-text">Please Wait</p>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <!-- Brand on the left -->
+    <a class="navbar-brand" href="#">Adesa Charity Aid Foundation</a>
+
+    <!-- ✅ Toggle button (hamburger) on the right -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse justify-content-end text-end" id="navMenu">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
   </div>
+</nav>
+
+
+  <!-- ✅ Hero Section -->
+  <section class="hero d-flex align-items-center justify-content-center text-center text-white">
+    <div class="container">
+      <div class="hero-content bg-overlay p-4 rounded">
+        <h2>Compassion in Action</h2>
+        <p>Helping the needy. Building orphanages. Changing lives in Mbale and beyond.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ About Section -->
+  <section id="about" class="section text-center">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Adesa Charity Aid Foundation is a non-governmental organization based in Mbale, Uganda. We are committed to supporting the underprivileged, building safe homes for orphans, and extending help through charity programs in the region.</p>
+      <img class="img-fluid mt-4 rounded" src="https://images.unsplash.com/photo-1601066522626-6c7bd9f63a7b?auto=format&fit=crop&w=800&q=80" alt="Helping hands">
+    </div>
+  </section>
+
+  <!-- ✅ Projects Section -->
+  <section id="projects" class="section bg-light text-center">
+    <div class="container">
+      <h2>Our Projects</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+          <img src="https://images.unsplash.com/photo-1617151394890-8a7479f4d29f?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded" alt="Orphanage">
+          <p class="mt-2">Orphanage Construction</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://images.unsplash.com/photo-1622922983252-95c84ee18fa5?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded" alt="Food aid">
+          <p class="mt-2">Food & Supplies Drive</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://images.unsplash.com/photo-1578269174936-270d73a53826?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded" alt="Volunteers">
+          <p class="mt-2">Community Outreach</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Donate Section -->
+  <section id="donate" class="section text-center">
+    <div class="container">
+      <h2>Support Our Cause</h2>
+      <p>Your donations help us build brighter futures for children and families in need.</p>
+      <a href="#" class="btn btn-primary mt-3">Donate Now</a>
+    </div>
+  </section>
+
+  <!-- ✅ Contact Section -->
+  <section id="contact" class="section text-center bg-light">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:adesacharityaidfoundation@gmail.com">adesacharityaidfoundation@gmail.com</a></p>
+      <p>Location: Mbale, Uganda</p>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+    <p>&copy; 2025 Adesa Charity Aid Foundation. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ Bootstrap & jQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
-<script>
-  localStorage.setItem('Environment', 'Web');
-  localStorage.setItem('NAME', 'w8c5c6df-f989-44b3-9c81-d95c31892e28');
-  const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
-  const ROUTECSS=(DATA)=>{ const styleElement = document.createElement("style"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
-  ROUTEJS(localStorage.getItem('NOVA'));
-  ROUTECSS(localStorage.getItem('NOVASTYLES'));
-  const CloudShipping = () => {
-  import('https://eroinnovations.github.io/FrameWork/Start/Start.js')
-  .then(module => {
-    if (typeof module.START === 'function') {
-        module.START();
-      } else {
-        console.error('START is not defined in the module');
-      }
-    })
-    .catch(error => {
-      console.error('Error loading the module:', error);
-    });
-  };
-  if (localStorage.getItem('Updates')) {
-    NOVASTART();
-    } else {
-    CloudShipping();
-  };
-</script>
 </html>
